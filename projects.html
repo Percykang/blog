@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>项目 · 仁稔</title>
+  <meta name="description" content="仁稔 正在做的事情，包括公众号写作、AI 工作流、内容系统等。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">仁稔</a>
+      <button class="nav__toggle" aria-label="菜单" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="articles.html">文章</a></li>
+        <li><a href="projects.html" class="active">项目</a></li>
+        <li><a href="about.html">关于</a></li>
+        <li><a href="contact.html">联系</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="page-header__title">正在做的事</h1>
+        <p class="page-header__desc">这里记录我正在进行的项目和探索方向。</p>
+      </div>
+
+      <ul class="project-list">
+
+        <li class="project-item">
+          <div>
+            <div class="project-card__status status--active" style="margin-bottom:10px;">
+              <span class="status-dot"></span> 持续更新中
+            </div>
+            <div class="project-item__title">公众号写作</div>
+            <div class="project-item__desc">
+              每周输出一篇深度文章，方向是写作方法论、AI 工具使用、大学生认知成长。<br />
+              不追热点，只写自己真正想清楚的东西。每篇文章都是一次认真的思考记录。
+            </div>
+          </div>
+          <div class="project-card__status status--active">
+            <span class="status-dot"></span> 活跃
+          </div>
+        </li>
+
+        <li class="project-item">
+          <div>
+            <div class="project-card__status status--building" style="margin-bottom:10px;">
+              <span class="status-dot"></span> 进行中
+            </div>
+            <div class="project-item__title">AI 内容工作流</div>
+            <div class="project-item__desc">
+              探索 AI 辅助写作的完整流程：从选题、大纲、资料搜集、初稿打磨到排版发布。<br />
+              目标是把高质量内容的生产效率提升 3 倍，同时保持输出的真实性和个人风格。
+            </div>
+          </div>
+          <div class="project-card__status status--building">
+            <span class="status-dot"></span> 构建中
+          </div>
+        </li>
+
+        <li class="project-item">
+          <div>
+            <div class="project-card__status status--building" style="margin-bottom:10px;">
+              <span class="status-dot"></span> 进行中
+            </div>
+            <div class="project-item__title">个人知识管理系统</div>
+            <div class="project-item__desc">
+              构建一套可沉淀、可复用的个人知识管理体系。从信息摄入（阅读、听播客）到洞察提炼，再到文章输出。<br />
+              工具链：Obsidian + Readwise + 自定义模板。
+            </div>
+          </div>
+          <div class="project-card__status status--building">
+            <span class="status-dot"></span> 构建中
+          </div>
+        </li>
+
+        <li class="project-item">
+          <div>
+            <div class="project-card__status status--planning" style="margin-bottom:10px;">
+              <span class="status-dot"></span> 规划中
+            </div>
+            <div class="project-item__title">一人公司实验</div>
+            <div class="project-item__desc">
+              探索一个人如何用 AI 工具、内容输出和极简架构，运营一个可持续的小型商业项目。<br />
+              目前还在研究阶段，梳理商业模式和可行路径。
+            </div>
+          </div>
+          <div class="project-card__status status--planning">
+            <span class="status-dot"></span> 规划中
+          </div>
+        </li>
+
+        <li class="project-item">
+          <div>
+            <div class="project-card__status status--planning" style="margin-bottom:10px;">
+              <span class="status-dot"></span> 规划中
+            </div>
+            <div class="project-item__title">个人网站</div>
+            <div class="project-item__desc">
+              就是你现在看到的这个。持续迭代，把它建成一个真正能体现我的思考和输出的个人 IP 主页。
+            </div>
+          </div>
+          <div class="project-card__status status--planning">
+            <span class="status-dot"></span> 迭代中
+          </div>
+        </li>
+
+      </ul>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <span class="footer__copy">© 2026 仁稔 · 认真写东西的人</span>
+      <nav class="footer__links">
+        <a href="articles.html">文章</a>
+        <a href="projects.html">项目</a>
+        <a href="contact.html">联系</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    function toggleNav() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

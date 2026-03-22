@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>联系 · 仁稔</title>
+  <meta name="description" content="联系 仁稔，邮件、公众号或社交媒体都可以找到我。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">仁稔</a>
+      <button class="nav__toggle" aria-label="菜单" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="articles.html">文章</a></li>
+        <li><a href="projects.html">项目</a></li>
+        <li><a href="about.html">关于</a></li>
+        <li><a href="contact.html" class="active">联系</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="page-header__title">联系我</h1>
+        <p class="page-header__desc">
+          有想法想交流？有合作想聊？或者只是读了我的文章想说点什么——都欢迎联系。
+        </p>
+      </div>
+
+      <div class="contact-section" style="padding-top:0;">
+
+        <ul class="contact-list">
+
+          <li class="contact-item">
+            <div class="contact-item__icon">✉️</div>
+            <div>
+              <div class="contact-item__label">邮件</div>
+              <div class="contact-item__value">renren2088220875@gmail.com</div>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="contact-item__icon">📝</div>
+            <div>
+              <div class="contact-item__label">微信公众号</div>
+              <div class="contact-item__value">搜索「仁稔」</div>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="contact-item__icon">𝕏</div>
+            <div>
+              <div class="contact-item__label">X / Twitter</div>
+              <div class="contact-item__value">@ZirlopEme87963</div>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="contact-item__icon">💼</div>
+            <div>
+              <div class="contact-item__label">即刻</div>
+              <div class="contact-item__value">仁稔</div>
+            </div>
+          </li>
+
+        </ul>
+
+        <div style="margin-top: 64px; padding: 32px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);">
+          <h3 style="font-size:1rem; font-weight:600; margin-bottom:12px;">关于回复</h3>
+          <p style="font-size:0.9rem; color:var(--text-2); line-height:1.8;">
+            我尽量在 48 小时内回复邮件。如果你的邮件和写作、AI、个人成长或一人公司相关，我会优先回复。<br />
+            如果是推广合作，暂时不接。
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <span class="footer__copy">© 2026 仁稔 · 认真写东西的人</span>
+      <nav class="footer__links">
+        <a href="articles.html">文章</a>
+        <a href="projects.html">项目</a>
+        <a href="contact.html">联系</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    function toggleNav() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

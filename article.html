@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>文章详情 · 仁稔</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">仁稔</a>
+      <button class="nav__toggle" aria-label="菜单" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="articles.html" class="active">文章</a></li>
+        <li><a href="projects.html">项目</a></li>
+        <li><a href="about.html">关于</a></li>
+        <li><a href="contact.html">联系</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="articleMain">
+    <!-- 内容由 JS 动态注入 -->
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <span class="footer__copy">© 2026 仁稔 · 认真写东西的人</span>
+      <nav class="footer__links">
+        <a href="articles.html">文章</a>
+        <a href="projects.html">项目</a>
+        <a href="contact.html">联系</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    function toggleNav() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+
+    // 文章数据库
+    const articles = {
+      1: {
+        title: '我为什么开始认真对待写作这件事',
+        date: '2026-03-10',
+        tags: ['写作', '个人成长'],
+        content: `
+          <p>很多人把写作当成一种表达方式——把已经想好的东西写下来。但我越来越觉得，这是对写作的一种误解。</p>
+
+          <p>写作不只是表达，它本身就是一种思考过程。</p>
+
+          <h2>写作之前，你以为自己想清楚了</h2>
+
+          <p>我们每天都在"思考"，但大多数时候，这种思考是模糊的、碎片化的。我们以为自己理解了某个概念，直到被人追问细节时才发现漏洞。我们以为自己有一个清晰的观点，直到试图把它写下来时才发现根本组织不起来。</p>
+
+          <p>这不是你不够聪明，而是因为大脑在处理语言时，有一种天然的"自欺欺人"机制——它会用模糊的词语掩盖没有想清楚的地方，然后让你以为一切都很清晰。</p>
+
+          <blockquote>
+            写作是强迫大脑精确化的过程。当你必须用具体的词语、具体的句子来表达一个想法时，模糊就无处遁形了。
+          </blockquote>
+
+          <h2>我是怎么开始认真写作的</h2>
+
+          <p>我开始认真对待写作，不是因为想成为作家，也不是因为想涨粉。而是因为有一天我发现：那些我以为自己"懂了"的东西，一旦要写成文章，就立刻暴露出很多我其实没想清楚的地方。</p>
+
+          <p>这种体验既让人沮丧，也让人兴奋。沮丧是因为原来自己的认知没那么扎实，兴奋是因为——原来写作可以是一个这么有效的工具。</p>
+
+          <h2>写作带来了什么</h2>
+
+          <p>坚持写作大半年后，我注意到几个变化：</p>
+
+          <ul>
+            <li>我在日常对话中表达得更清晰了，因为我更习惯在开口前整理逻辑</li>
+            <li>我读东西时会更主动地问"这个论点的依据是什么"，而不是被动接受</li>
+            <li>我对某些问题有了自己的稳定观点，而不是人云亦云</li>
+          </ul>
+
+          <p>这些变化不是写作直接带来的——而是写作逼迫你深度思考，深度思考带来的。</p>
+
+          <h2>最后</h2>
+
+          <p>我不是在劝所有人都去写公众号，写作有很多形式，日记、备忘录、内部文档都算。重要的是那个过程：把模糊的想法变成清晰的文字。</p>
+
+          <p>如果你也有"我懂这个东西，但说不清楚"的困扰，不妨试着把它写下来。</p>
+
+          <p>写的过程，就是想清楚的过程。</p>
+        `
+      },
+      2: {
+        title: 'AI 工具改变了我的内容生产方式',
+        date: '2026-02-28',
+        tags: ['AI', '工作流'],
+        content: `
+          <p>我用 AI 工具已经将近一年了。这篇文章想聊聊它真正改变了我什么，以及没有改变什么。</p>
+
+          <h2>一个常见的误区</h2>
+
+          <p>很多人对 AI 写作工具的第一反应是：用 AI 写文章，不就是在作弊吗？</p>
+
+          <p>我以前也这么想。但用了一段时间之后，我改变了看法。</p>
+
+          <p>关键在于：AI 在写作流程里处于哪个位置。</p>
+
+          <h2>我的工作流是什么样的</h2>
+
+          <p>我现在的写作流程大概是这样：</p>
+
+          <ul>
+            <li><strong>选题和核心观点</strong>：完全由我自己来。这是最重要的部分，也是 AI 最难替代的部分。</li>
+            <li><strong>大纲搭建</strong>：我先列一个草稿，然后让 AI 给我反馈——哪里逻辑不通，哪里可以补充。</li>
+            <li><strong>资料搜集</strong>：用 AI 快速梳理某个领域的基础知识，节省大量查资料的时间。</li>
+            <li><strong>初稿打磨</strong>：我写完初稿之后，让 AI 帮我找逻辑漏洞、冗余表达、以及读者可能会有疑问的地方。</li>
+            <li><strong>最终定稿</strong>：还是我自己来，因为语言风格和价值判断必须是我的。</li>
+          </ul>
+
+          <h2>改变的是什么</h2>
+
+          <p>效率确实提升了，但更重要的是：我可以把更多精力放在真正需要判断力的地方——选题、观点、叙事结构。</p>
+
+          <blockquote>
+            AI 接管了那些"费时间但不需要深度思考"的环节，把我解放出来专注于只有我才能做的部分。
+          </blockquote>
+
+          <h2>没有改变的是什么</h2>
+
+          <p>最核心的东西没变：你对这个世界的观察，你的判断力，你选择关注什么、忽略什么的品味——这些 AI 没办法替代你。</p>
+
+          <p>如果你没有独立的想法，AI 只能帮你更快地生产平庸内容。</p>
+        `
+      },
+      3: {
+        title: '一人公司的逻辑：小即是美',
+        date: '2026-02-10',
+        tags: ['一人公司', '商业'],
+        content: `
+          <p>当我说我对"一人公司"感兴趣时，很多人的第一反应是：那不就是自由职业吗？</p>
+
+          <p>不完全是。自由职业出售的是时间，一人公司出售的是产品或服务系统。但这不是我今天想聊的重点。</p>
+
+          <h2>为什么主动选择小</h2>
+
+          <p>一人公司的核心不是规模小，而是<strong>主动选择保持小</strong>。</p>
+
+          <p>扩张、融资、招人——这些通常被视为成功的信号。但它们背后有一个很少被讨论的代价：你的时间和注意力，将越来越不属于你自己。</p>
+
+          <p>当团队扩大，你需要开更多会议、处理更多人际关系、应对更多管理问题。你从一个做事的人，变成一个管理做事的人。</p>
+
+          <p>这对某些人是理想状态，但对我来说不是。</p>
+
+          <h2>一人公司真正在追求什么</h2>
+
+          <p>我理解的一人公司，核心是三件事：</p>
+
+          <ul>
+            <li><strong>对自己时间的控制权</strong>：你决定做什么，不做什么</li>
+            <li><strong>对注意力的保护</strong>：深度工作，而不是永远在响应别人</li>
+            <li><strong>可持续的输出系统</strong>：不依赖爆发，而是稳定积累</li>
+          </ul>
+
+          <h2>AI 让一人公司更可行</h2>
+
+          <p>过去，一个人很难同时做好产品、运营、客服、内容。但现在，AI 工具可以承担大量重复性工作，一个人的生产效率已经可以接近一个小团队。</p>
+
+          <p>这不是说 AI 可以替代一切，而是说：<strong>一个有能力的个体，现在有了更好的工具</strong>。</p>
+
+          <blockquote>
+            小即是美，不是因为没有能力变大，而是因为清楚地知道自己真正想要什么。
+          </blockquote>
+        `
+      },
+      4: {
+        title: '认知升级不是读更多书，而是改变思维框架',
+        date: '2026-01-20',
+        tags: ['认知', '个人成长'],
+        content: `
+          <p>我认识很多爱读书的人，书单又长又厚，但思维方式几年前后没什么变化。我也认识一些读书不多的人，但看问题的角度就是比大多数人准。</p>
+
+          <p>这让我开始思考：认知升级到底是怎么发生的？</p>
+
+          <h2>信息 ≠ 认知</h2>
+
+          <p>我们生活在一个信息过剩的时代，每天被海量内容轰炸。但信息摄入量和认知能力是两回事。</p>
+
+          <p>信息是原材料，认知是处理原材料的系统。如果你的处理系统没有升级，堆再多原材料也只是库存，不会变成产品。</p>
+
+          <h2>什么是思维框架</h2>
+
+          <p>框架是你解读世界的方式。比如：</p>
+
+          <ul>
+            <li>用"机会成本"框架看选择，就会关注做一件事放弃了什么</li>
+            <li>用"激励机制"框架看行为，就会问"这个人这么做，背后的动机是什么"</li>
+            <li>用"系统思维"看问题，就会关注反馈回路，而不是孤立的原因和结果</li>
+          </ul>
+
+          <p>同样一件事，不同的框架会让你看到完全不同的东西。</p>
+
+          <h2>如何真正升级认知</h2>
+
+          <p>我的理解是：认知升级发生在你开始用一个新框架解读原来熟悉的事物的时候。</p>
+
+          <p>不是读了一本新书，而是读了一本书之后，你用书里的概念重新分析了你过去经历过的某件事，然后有了新的理解——那一刻，认知真的升级了。</p>
+
+          <blockquote>
+            认知升级的标志不是"我知道了一个新东西"，而是"我用新的方式理解了一个旧东西"。
+          </blockquote>
+
+          <h2>写作是检验认知的最好方式</h2>
+
+          <p>所以我一直相信写作是认知升级的加速器。当你试图把一个框架用文字讲清楚，你就在被迫检验自己是否真的理解了它。</p>
+
+          <p>输入是原材料，思考是加工，写作是检验，输出是结果。少了写作这一环，很多认知都停留在"感觉懂了"的阶段。</p>
+        `
+      },
+      5: {
+        title: '普通人如何用持续写作建立个人品牌',
+        date: '2026-01-05',
+        tags: ['写作', '个人品牌'],
+        content: `
+          <p>个人品牌这个词在今天已经被说烂了，但大多数关于它的建议要么太虚（"找到自己的定位！"），要么太功利（"做爆款，涨粉！"）。</p>
+
+          <p>我想从一个更朴素的角度聊聊这件事。</p>
+
+          <h2>个人品牌的本质是什么</h2>
+
+          <p>我的理解是：<strong>在某个细分领域，当别人想到某个话题时，第一个想到你</strong>。</p>
+
+          <p>不需要百万粉丝。你只需要在某个领域，让足够多的对的人，对你有清晰的认知。</p>
+
+          <h2>为什么持续写作是最可靠的路径</h2>
+
+          <p>因为写作有几个其他方式很难替代的特点：</p>
+
+          <ul>
+            <li>它是可检索的。别人搜索某个话题时，可能找到你三年前写的文章</li>
+            <li>它是可积累的。每一篇文章都是一块砖，时间越长，墙越厚</li>
+            <li>它筛选了受众。认真写长文，自然会吸引认真思考的人</li>
+          </ul>
+
+          <h2>普通人怎么做</h2>
+
+          <p>不需要从零开始搭建"内容矩阵"，也不需要研究算法。只需要：</p>
+
+          <ul>
+            <li>选一个你真正感兴趣、愿意持续研究的方向</li>
+            <li>定期把你的思考写下来，不管篇幅长短</li>
+            <li>坚持，别因为没人看就放弃</li>
+          </ul>
+
+          <p>最开始没人看是正常的。但当你坚持写了 50 篇、100 篇，有一天你会发现，有人在认真读你写的东西，有人因为你的文章来找你。</p>
+
+          <blockquote>
+            个人品牌不是设计出来的，是写出来的、做出来的，是时间和真诚积累出来的。
+          </blockquote>
+        `
+      },
+      6: {
+        title: 'AI 时代，什么样的能力更值钱',
+        date: '2025-12-18',
+        tags: ['AI', '认知'],
+        content: `
+          <p>每隔一段时间，我都会看到有人焦虑：AI 要替代 XX 职业了。</p>
+
+          <p>这种焦虑可以理解，但我觉得问题问错了。与其问"AI 会不会替代我"，不如问"AI 时代，什么能力更值钱"。</p>
+
+          <h2>AI 擅长什么</h2>
+
+          <p>AI 擅长的是：执行明确的任务，处理大量信息，生成符合要求的内容，模式识别。</p>
+
+          <p>这些能力正在替代的，是那些规则明确、可以被清晰描述的工作。</p>
+
+          <h2>人的不可替代性在哪里</h2>
+
+          <p>我的答案是三个词：<strong>判断力、品味、提问能力</strong>。</p>
+
+          <p><strong>判断力</strong>是在信息不完整、情境复杂时做出决策的能力。AI 可以给你十个方案，但选哪个，背后的权衡是人来做的。</p>
+
+          <p><strong>品味</strong>是知道什么是好的。AI 可以生成大量内容，但什么是真正好的内容、好的设计、好的产品，这个标准是人给的。</p>
+
+          <p><strong>提问能力</strong>可能是最被低估的。AI 的输出质量高度依赖你的输入质量。能问出好问题，等于能驱动 AI 产出好结果。</p>
+
+          <h2>最后</h2>
+
+          <p>AI 工具本质上是一个杠杆。它放大的，是使用它的人的能力。</p>
+
+          <p>一个有判断力、有品味、会提问的人，用 AI 可以做到十倍的事。一个没有这些能力的人，用 AI 只会更快地产出平庸。</p>
+
+          <blockquote>
+            工具变了，但能力的底层逻辑没变：你的思考深度决定你能从工具里拿到多少。
+          </blockquote>
+        `
+      }
+    };
+
+    // 渲染文章
+    function renderArticle() {
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get('id') || '1';
+      const article = articles[id];
+
+      if (!article) {
+        document.getElementById('articleMain').innerHTML = `
+          <div class="container" style="padding-top:80px">
+            <div class="empty">文章不存在</div>
+            <div style="text-align:center;margin-top:24px">
+              <a href="articles.html" class="btn btn--outline">← 返回文章列表</a>
+            </div>
+          </div>`;
+        return;
+      }
+
+      document.title = article.title + ' · 仁稔';
+
+      const tagsHtml = article.tags.map(t => `<span class="tag">${t}</span>`).join('');
+
+      document.getElementById('articleMain').innerHTML = `
+        <div class="container">
+          <div class="article-header">
+            <a href="articles.html" class="back-link">← 所有文章</a>
+            <div class="article-header__tags">${tagsHtml}</div>
+            <h1 class="article-header__title">${article.title}</h1>
+            <div class="article-header__meta">
+              <span>${article.date}</span>
+              <span>仁稔</span>
+            </div>
+          </div>
+          <article class="article-body">${article.content}</article>
+        </div>
+      `;
+    }
+
+    renderArticle();
+  </script>
+</body>
+</html>

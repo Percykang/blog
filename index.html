@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>仁稔 · 写作 · AI · 个人成长</title>
+  <meta name="description" content="记录思考，持续输出。关注写作、AI、个人成长与一人公司。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 导航 -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">仁稔</a>
+      <button class="nav__toggle" aria-label="菜单" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="articles.html">文章</a></li>
+        <li><a href="projects.html">项目</a></li>
+        <li><a href="about.html">关于</a></li>
+        <li><a href="contact.html">联系</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <span class="hero__eyebrow">写作 · AI · 个人成长 · 一人公司</span>
+      <h1 class="hero__title">
+        用文字记录思考，<br />
+        <em>用输出倒逼成长</em>
+      </h1>
+      <p class="hero__sub">
+        我在这里写作、思考、实验。关注写作方法论、AI 工具应用、认知升级，以及一人公司的可能性。
+      </p>
+      <div class="hero__actions">
+        <a href="about.html" class="btn btn--primary">了解我 →</a>
+        <a href="articles.html" class="btn btn--outline">读文章</a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- 最新文章 -->
+  <section class="section">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">最近在写</h2>
+        <a href="articles.html" class="section__more">全部文章 →</a>
+      </div>
+
+      <ul class="article-list">
+
+        <li class="article-item">
+          <a href="article.html?id=1" style="display:contents;">
+            <div class="article-item__left">
+              <div class="article-item__title">我为什么开始认真对待写作这件事</div>
+              <div class="article-item__excerpt">
+                很多人把写作当成一种表达，我越来越觉得它是一种思考工具。不写出来，你永远不知道自己到底有没有想清楚。
+              </div>
+              <div class="article-item__meta">
+                <span class="article-item__date">2026-03-10</span>
+                <span class="tag">写作</span>
+                <span class="tag">个人成长</span>
+              </div>
+            </div>
+          </a>
+          <div class="article-item__right">
+            <span class="article-item__date">03-10</span>
+          </div>
+        </li>
+
+        <li class="article-item">
+          <a href="article.html?id=2" style="display:contents;">
+            <div class="article-item__left">
+              <div class="article-item__title">AI 工具改变了我的内容生产方式</div>
+              <div class="article-item__excerpt">
+                用 AI 不是为了偷懒，而是为了把精力集中在真正需要人类判断的地方。这一年我搭建了一套适合自己的 AI 辅助工作流。
+              </div>
+              <div class="article-item__meta">
+                <span class="article-item__date">2026-02-28</span>
+                <span class="tag">AI</span>
+                <span class="tag">工作流</span>
+              </div>
+            </div>
+          </a>
+          <div class="article-item__right">
+            <span class="article-item__date">02-28</span>
+          </div>
+        </li>
+
+        <li class="article-item">
+          <a href="article.html?id=3" style="display:contents;">
+            <div class="article-item__left">
+              <div class="article-item__title">一人公司的逻辑：小即是美</div>
+              <div class="article-item__excerpt">
+                不是因为融不到钱，而是主动选择小规模运作。一人公司的核心不是节省成本，而是保留对自己时间和注意力的控制权。
+              </div>
+              <div class="article-item__meta">
+                <span class="article-item__date">2026-02-10</span>
+                <span class="tag">一人公司</span>
+                <span class="tag">商业</span>
+              </div>
+            </div>
+          </a>
+          <div class="article-item__right">
+            <span class="article-item__date">02-10</span>
+          </div>
+        </li>
+
+        <li class="article-item">
+          <a href="article.html?id=4" style="display:contents;">
+            <div class="article-item__left">
+              <div class="article-item__title">认知升级不是读更多书，而是改变思维框架</div>
+              <div class="article-item__excerpt">
+                我们常常误以为信息密度等于认知深度。但真正的升级发生在你开始用不同的框架解读同一件事的时候。
+              </div>
+              <div class="article-item__meta">
+                <span class="article-item__date">2026-01-20</span>
+                <span class="tag">认知</span>
+                <span class="tag">成长</span>
+              </div>
+            </div>
+          </a>
+          <div class="article-item__right">
+            <span class="article-item__date">01-20</span>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- 项目 -->
+  <section class="section">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">正在做的事</h2>
+        <a href="projects.html" class="section__more">全部项目 →</a>
+      </div>
+
+      <div class="project-grid">
+
+        <div class="project-card">
+          <div class="project-card__status status--active">
+            <span class="status-dot"></span> 持续更新
+          </div>
+          <div class="project-card__title">公众号写作</div>
+          <div class="project-card__desc">每周输出一篇深度文章，方向是写作方法论、AI 工具使用、大学生成长认知。</div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card__status status--building">
+            <span class="status-dot"></span> 进行中
+          </div>
+          <div class="project-card__title">AI 内容工作流</div>
+          <div class="project-card__desc">探索 AI 辅助写作、选题、排版的整套流程，目标是把内容生产效率提升 3 倍。</div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card__status status--planning">
+            <span class="status-dot"></span> 规划中
+          </div>
+          <div class="project-card__title">个人知识系统</div>
+          <div class="project-card__desc">构建一套可沉淀、可复用的个人知识管理体系，从信息摄入到洞察输出。</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <span class="footer__copy">© 2026 仁稔 · 认真写东西的人</span>
+      <nav class="footer__links">
+        <a href="articles.html">文章</a>
+        <a href="projects.html">项目</a>
+        <a href="contact.html">联系</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    function toggleNav() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
